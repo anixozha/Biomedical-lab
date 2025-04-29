@@ -1,0 +1,31 @@
+Source: record eegmat/Subject00_2.edf  Start: [00:00:00.000 01/01/2011]
+val has 22 rows (signals) and 31000 columns (samples/signal)
+Duration:     0:00
+Sampling frequency: 500 Hz  Sampling interval: 0.002 sec
+Row	Signal	Gain	Base	Units
+1	EEG Fp1	380.657698204	2767	uV
+2	EEG Fp2	503.121603344	8663	uV
+3	EEG F3	571.996397038	6360	uV
+4	EEG F4	630.930345713	4088	uV
+5	EEG F7	528.759865081	6868	uV
+6	EEG F8	550.334601086	5763	uV
+7	EEG T3	626.268292438	2718	uV
+8	EEG T4	506.067520612	1215	uV
+9	EEG C3	693.794322881	5623	uV
+10	EEG C4	759.569374524	4835	uV
+11	EEG T5	645.238340912	2174	uV
+12	EEG T6	656.574248343	-5051	uV
+13	EEG P3	571.159641015	-653	uV
+14	EEG P4	567.325087533	330	uV
+15	EEG O1	596.41327513	-614	uV
+16	EEG O2	436.116269988	-4107	uV
+17	EEG Fz	616.034435888	3447	uV
+18	EEG Cz	462.533547533	6134	uV
+19	EEG Pz	621.696157114	624	uV
+20	EEG A2-A1	797.574817593	-4517	uV
+21	ECG ECG	89113.798055	-21702	mV
+22	EDF Annotations	32767.5	-1	nd
+
+To convert from raw units to the physical units shown
+above, call the 'rdmat.m' function from the wfdb-matlab
+toolbox: https://physionet.org/physiotools/matlab/wfdb-app-matlab/

@@ -1,0 +1,26 @@
+close all;
+clear all;
+clc;
+load mit200;
+clean_ECG=ecgsig(3640:6197);
+timecleanECG=tm(3640:6197);
+peak=clean_ECG>0.5;
+peak_values=peak.*clean_ECG;
+fs=360;
+[rpeak, loc]=findpeaks(clean_ECG,'MinPeakHeight',0.5);
+no_rpeak=length(loc);
+ts=length(clean_ECG)/fs;
+heart_bpm=(no_rpeak*60)/ts;
+disp(strcat('Heart rate=', num2str(heart_bpm,'%.2f')));
+subplot(211);plot(timecleanECG, clean_ECG);
+xlabel('Time');
+ylabel('amplitude');
+title('clean ecg sirjan acharya');
+subplot(212);
+plot(peak_values);
+hold on;
+plot(loc, clean_ECG(loc),'r*');
+hold off
+xlabel('Time');
+ylabel('amplitude');
+title('clean ecg with r peak, sirjan acharya');
